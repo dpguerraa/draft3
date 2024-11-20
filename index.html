@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XD Magazine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&family=Oswald&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background-color: #ff6600; /* Orange */
+      padding: 2em 0;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3.5em;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      font-weight: 600;
+      margin-top: 0.5em;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      padding: 1em 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1.5em;
+      font-weight: 600;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6600;
+    }
+
+    /* Subtopics Section */
+    .subtopics {
+      display: flex;
+      justify-content: center;
+      margin-top: 3em;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+
+    .subtopic {
+      background-color: #333;
+      color: #ff6600;
+      margin: 1em;
+      padding: 2em;
+      width: 30%;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .subtopic:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .subtopic-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1em;
+    }
+
+    .subtopic h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.8em;
+      color: #ff6600;
+      margin-bottom: 0.5em;
+    }
+
+    .subtopic p {
+      font-size: 1.2em;
+      color: #fff;
+      font-weight: 400;
+    }
+
+    /* Articles List */
+    .article-list {
+      display: none;
+      padding: 2em;
+      background-color: #333;
+      border-radius: 8px;
+      margin-top: 2em;
+      text-align: left;
+    }
+
+    .article-list h3 {
+      font-size: 2em;
+      color: #ff6600;
+    }
+
+    .article-item {
+      padding: 1em;
+      border-bottom: 1px solid #ff6600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .article-item:hover {
+      background-color: #444;
+    }
+
+    /* Article Content (Hidden by default) */
+    .article-content {
+      display: none;
+      padding: 2em;
+      background-color: #333;
+      border-radius: 8px;
+      margin-top: 2em;
+      text-align: left;
+      width: 90%;
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+
+    .article-content h3 {
+      font-size: 2.5em;
+      color: #ff6600;
+      margin-bottom: 1em;
+    }
+
+    .article-content p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #fff;
+    }
+
+    .article-content button {
+      padding: 1em 2em;
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      font-size: 1.1em;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1em;
+    }
+
+    .article-content button:hover {
+      background-color: #ff4e00;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #222;
+      text-align: center;
+      padding: 1em 0;
+      color: white;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>XD Magazine</h1>
+    <p>"Think Outside the Site" - Engaging Filipino Stories</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#mission">Mission & Vision</a>
+    <a href="#forum">Forum</a>
+    <a href="#feedback">Feedback</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About XD Magazine</h2>
+      <p>XD Magazine shares captivating Filipino stories that highlight challenges and triumphs in Filipino culture. We aim to inform, entertain, and connect a global audience through powerful narratives.</p>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section id="mission">
+      <h2>Mission & Vision</h2>
+      <div class="grid-container">
+        <div class="grid-item">
+          <h3>Mission</h3>
+          <p>Our mission is to create a platform that ignites passion through Filipino storytelling and connects a global audience to Filipino experiences.</p>
+        </div>
+        <div class="grid-item">
+          <h3>Vision</h3>
+          <p>We envision XD Magazine as the leading digital platform for Filipino culture, offering a space to explore, enjoy, and share stories that connect us all.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subtopics Section -->
+    <section id="subtopics" class="subtopics">
+      <div class="subtopic" onclick="showArticleList('iwas-sawi')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Emotion_Icons.svg" alt="IWAS SAWI PROJECT" class="subtopic-img">
+        <h3>IWAS SAWI PROJECT</h3>
+        <p>Explore deep narratives around emotions and human connections in Filipino culture.</p>
+      </div>
+      <div class="subtopic" onclick="showArticleList('alam-at')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Flag_of_the_Philippines.svg" alt="ALAM-AT" class="subtopic-img">
+        <h3>ALAM-AT</h3>
+        <p>Dive into historical events and stories that have shaped the Filipino identity.</p>
+      </div>
+      <div class="subtopic" onclick="showArticleList('outer-space')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Comedian_%28Icon%29.svg/1024px-Comedian_%28Icon%29.svg.png" alt="OUTER SPACE" class="subtopic-img">
+        <h3>OUTER SPACE</h3>
+        <p>Enjoy the lighthearted, humorous side of Filipino culture through relatable comedy pieces.</p>
+      </div>
+    </section>
+
+    <!-- Articles List -->
+    <div id="iwas-sawi" class="article-list">
+      <h3>Articles on IWAS SAWI PROJECT</h3>
+      <div class="article-item" onclick="showArticleContent('iwas-sawi-article-1')">
+        <p>Understanding Filipino Emotions</p>
+      </div>
+      <div class="article-item" onclick="showArticleContent('iwas-sawi-article-2')">
+        <p>Healing from Heartbreak: Filipino Style</p>
+      </div>
+    </div>
+
+    <div id="alam-at" class="article-list">
+      <h3>Articles on ALAM-AT</h3>
+      <div class="article-item" onclick="showArticleContent('alam-at-article-1')">
+        <p>Philippine Revolution</p>
+      </div>
+      <div class="article-item" onclick="showArticleContent('alam-at-article-2')">
+        <p>Colonial Influence on Filipino Culture</p>
+      </div>
+    </div>
+
+    <div id="outer-space" class="article-list">
+      <h3>Articles on OUTER SPACE</h3>
+      <div class="article-item" onclick="showArticleContent('outer-space-article-1')">
+        <p>The Humor Behind Filipino TV Shows</p>
+      </div>
+      <div class="article-item" onclick="showArticleContent('outer-space-article-2')">
+        <p>Stand-up Comedy in the Philippines</p>
+      </div>
+    </div>
+
+    <!-- Full Article Content Section -->
+    <div id="iwas-sawi-article-1" class="article-content">
+      <h3>Understanding Filipino Emotions</h3>
+      <p>Filipino culture is deeply rooted in emotional connections. Feelings are not just expressions; they reflect the social fabric that binds Filipinos...</p>
+      <button onclick="goBack()">Back to Articles</button>
+    </div>
+
+    <div id="iwas-sawi-article-2" class="article-content">
+      <h3>Healing from Heartbreak: Filipino Style</h3>
+      <p>Heartbreak is a common experience for many Filipinos. The unique way they heal, supported by strong family ties and a rich emotional culture...</p>
+      <button onclick="goBack()">Back to Articles</button>
+    </div>
+
+    <div id="alam-at-article-1" class="article-content">
+      <h3>Philippine Revolution</h3>
+      <p>The Philippine Revolution was a turning point in the country's history. The fight against Spanish rule was not just about independence, but about defining the Filipino identity...</p>
+      <button onclick="goBack()">Back to Articles</button>
+    </div>
+
+    <div id="alam-at-article-2" class="article-content">
+      <h3>Colonial Influence on Filipino Culture</h3>
+      <p>Filipino culture was heavily shaped by Spanish and American colonization. This article delves into how the colonial past has shaped modern Filipino values...</p>
+      <button onclick="goBack()">Back to Articles</button>
+    </div>
+
+    <div id="outer-space-article-1" class="article-content">
+      <h3>The Humor Behind Filipino TV Shows</h3>
+      <p>Filipino TV shows have long been known for their humor. From sitcoms to variety shows, humor plays a central role in Filipino media...</p>
+      <button onclick="goBack()">Back to Articles</button>
+    </div>
+
+    <div id="outer-space-article-2" class="article-content">
+      <h3>Stand-up Comedy in the Philippines</h3>
+      <p>Stand-up comedy is gaining popularity in the Philippines. In this article, we explore how Filipino comedians are taking the stage and bringing laughter to audiences...</p>
+      <button onclick="goBack()">Back to Articles</button>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 XD Magazine | "Think Outside the Site" | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    // Show the list of articles for the selected subtopic
+    function showArticleList(subtopic) {
+      // Hide all article lists
+      const articleLists = document.querySelectorAll('.article-list');
+      articleLists.forEach(list => list.style.display = 'none');
+      
+      // Show the selected article list
+      document.getElementById(subtopic).style.display = 'block';
+    }
+
+    // Show the selected article content
+    function showArticleContent(article) {
+      // Hide all article content sections
+      const articles = document.querySelectorAll('.article-content');
+      articles.forEach(content => content.style.display = 'none');
+      
+      // Show the selected article content
+      document.getElementById(article).style.display = 'block';
+      // Hide article list when article is clicked
+      const articleLists = document.querySelectorAll('.article-list');
+      articleLists.forEach(list => list.style.display = 'none');
+    }
+
+    // Go back to the article list section
+    function goBack() {
+      const articleLists = document.querySelectorAll('.article-list');
+      articleLists.forEach(list => list.style.display = 'block'); // Show article list
+      const articles = document.querySelectorAll('.article-content');
+      articles.forEach(content => content.style.display = 'none'); // Hide all articles
+    }
+  </script>
+
+</body>
+</html>
